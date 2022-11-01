@@ -98,7 +98,7 @@ local Button = MiscTab:CreateButton({
 	end,
 })
 
-local Button = MiscTab:CreateButton({                                         
+local Button = MiscTab:CreateButton({
 	Name = "Partial disabler",
 	Callback = function()
 		Rayfield:Notify("BlackOut","Attempting to disable",10010348543)
@@ -106,6 +106,19 @@ local Button = MiscTab:CreateButton({
 		wait(3)
 		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
 		workspace.Gravity = 147.14999999999998
+		game:GetService("ReplicatedStorage").globalJumps.Value = 0
+		Rayfield:Notify("BlackOut","Disabled",11430595837)
+	end,
+})
+
+local Button = MiscTab:CreateButton({                                         
+	Name = "Enable AC",
+	Callback = function()
+		Rayfield:Notify("BlackOut","Attempting to disable",10010348543)
+		game:GetService("ReplicatedStorage").globalSpeed.Value = 0
+		wait(3)
+		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
+		workspace.Gravity = 196.2
 		game:GetService("ReplicatedStorage").globalJumps.Value = 0
 		Rayfield:Notify("BlackOut","Disabled",11430595837)
 	end,
