@@ -1,5 +1,5 @@
 local Release = "Beta 5"
-local NotificationDuration = 6.5
+local NotificationDuration = 4
 local ConfigurationFolder = "Rayfield Interface Suite"
 local ConfigurationExtension = ".rfld"
 
