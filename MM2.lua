@@ -1,10 +1,6 @@
 ---@diagnostic disable: undefined-global
 
-
--- game IDs
-local BuildABoat = 537413528
-
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Iratethisname10/Script/main/RayFieldUI.lua'))()
 Rayfield:Notify("Sex is good","have sex with Vo",10010348543)
 
 
