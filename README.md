@@ -1,1 +1,1 @@
-cum in good :D
+cum is good :D
