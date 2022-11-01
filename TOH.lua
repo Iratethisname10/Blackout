@@ -38,14 +38,14 @@ local PlayerTab = Window:CreateTab("Local Player")
 
 local Label = PlayerTab:CreateLabel("Modifications")
 
-local Button = PlayerTab:CreateButton({                                         -- Infinite jumps
+local Button = PlayerTab:CreateButton({
 	Name = "Infinite Jumps",
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalJumps.Value = 6969
 		Rayfield:Notify("BlackOut","6900 jumps to be exact",10010348543)
 	end,
 })
-local Button = PlayerTab:CreateButton({                                         -- Increase Speed
+local Button = PlayerTab:CreateButton({
 	Name = "Increase Speed",
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalSpeed.Value = 38
@@ -55,21 +55,21 @@ local Button = PlayerTab:CreateButton({                                         
 
 local Label = PlayerTab:CreateLabel("Reset")
 
-local Button = PlayerTab:CreateButton({                                         -- Reset jumps
+local Button = PlayerTab:CreateButton({
 	Name = "Reset Jumps",
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalJumps.Value = 0
 		Rayfield:Notify("BlackOut","Jumps set to 0",11430595837)
 	end,
 })
-local Button = PlayerTab:CreateButton({                                         -- Reset Speed
+local Button = PlayerTab:CreateButton({
 	Name = "Reset Speed",
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
 		Rayfield:Notify("BlackOut","Speed set to 16",11430595837)
 	end,
 })
-local Button = PlayerTab:CreateButton({                                         -- Reset all
+local Button = PlayerTab:CreateButton({
 	Name = "Reset All",
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
@@ -87,12 +87,11 @@ local MiscTab = Window:CreateTab("Misc")
 local Button = MiscTab:CreateButton({
 	Name = "Win",
 	Callback = function()
-		game:GetService("ReplicatedStorage").globalSpeed.Value = 2
-		Rayfield:Notify("BlackOut","Attempting to TP",11430595837)
-		wait(4)
-		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
-		local FaggotSlut = game:GetService("workspace").tower.finishes:FindFirstChild("Finish")
+		local FaggotSlut = game:GetService("Workspace").tower.finishes:FindFirstChild("Finish")
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FaggotSlut.CFrame
+		if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame ~= FaggotSlut.CFrame then
+			Rayfield:Notify("BlackOut","Failed",11430595837)
+		end
 		if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame == FaggotSlut.CFrame then
 			Rayfield:Notify("BlackOut","Success",11430595837)
 		end
@@ -111,4 +110,3 @@ local Button = MiscTab:CreateButton({
 		Rayfield:Notify("BlackOut","Disabled",11430595837)
 	end,
 })
-
