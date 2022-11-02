@@ -1,6 +1,6 @@
 ---@diagnostic disable: undefined-global
 
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Iratethisname10/Script/main/RayFieldUI.lua'))()
+local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 
 local Window = Rayfield:CreateWindow({
