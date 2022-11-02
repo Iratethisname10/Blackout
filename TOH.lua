@@ -102,3 +102,16 @@ local Button = MiscTab:CreateButton({
 		Rayfield:Notify("BlackOut","Appeal text copied to clipboard",11430595837)
 	end,
 })
+
+local Button = MiscTab:CreateButton({
+	Name = "Anti Client Kick",
+	Callback = function()
+		Rayfield:Notify("BlackOut","Disabled Client Kicks",11430595837)
+		local vu = game:GetService("VirtualUser")
+		game:GetService("Players").LocalPlayer.Idled:connect(function()
+			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+			wait(1)
+			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+		end)
+	end,
+})
