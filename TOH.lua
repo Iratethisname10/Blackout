@@ -45,11 +45,16 @@ local Button = PlayerTab:CreateButton({
 		Rayfield:Notify("BlackOut","6900 jumps to be exact",10010348543)
 	end,
 })
-local Button = PlayerTab:CreateButton({
-	Name = "Increase Speed",
-	Callback = function()
-		game:GetService("ReplicatedStorage").globalSpeed.Value = 38
-		Rayfield:Notify("BlackOut","Speed Set to 38",11430595837)
+local Slider = PlayerTab:CreateSlider({
+	Name = "SetSpeed",
+	Range = {16, 120},
+	Increment = 5,
+	Suffix = "Speed",
+	CurrentValue = 16,
+	Flag = "Speed Slider", 
+	Callback = function(Value)
+    	game:GetService("ReplicatedStorage").globalSpeed.Value = Value
+		Rayfield:Notify("BlackOut","Speed Set to "..Value,11430595837)
 	end,
 })
 
@@ -115,3 +120,4 @@ local Button = MiscTab:CreateButton({
 		end)
 	end,
 })
+
