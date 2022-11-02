@@ -1,13 +1,12 @@
 ---@diagnostic disable: undefined-global
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/Iratethisname10/Script/main/RayFieldUI.lua'))()
-Rayfield:Notify("Sex is good","have sex with Vo",10010348543)
 
 
 local Window = Rayfield:CreateWindow({
 	Name = "BlackOut v1",
 	LoadingTitle = "BlackOut v1",
-	LoadingSubtitle = "Script By a nigga",
+	LoadingSubtitle = "Join the Discord pls",
 	ConfigurationSaving = {
 		Enabled = true,
 		FileName = "BlackOut"
@@ -31,7 +30,7 @@ local Button = CreditsTab:CreateButton({
 	end,
 })
 
-local Paragraph = CreditsTab:CreateParagraph({Title = "Lead Developer, Vo#1092", Content = "A Very skilled programmer who has learn lua for more than 2 years this sexy giga chad gets all the bitches"})
+local Paragraph = CreditsTab:CreateParagraph({Title = "Lead Developer, Vo#1092", Content = "hi, im new to scripting. cum is good :D"})
 
 local FunnyTab = Window:CreateTab("Funny", 4483362458) 
 
