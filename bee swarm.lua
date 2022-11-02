@@ -50,120 +50,127 @@ local Button = TPTab:CreateButton({
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").MonsterBarriers:FindFirstChild("NoobDoor").CFrame
 	end,
 })
-
-
-
-
-
+local Button = TPTab:CreateButton({
+	Name = "Pro Shop",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").MonsterBarriers:FindFirstChild("ProDoor").CFrame
+	end,
+})
+local Button = TPTab:CreateButton({
+	Name = "Mountain Top Shop",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Shops.Mountaintop:FindFirstChild("FloorPart").CFrame
+	end,
+})
 
 local Section = TPTab:CreateSection("feilds")
 
 local Button = TPTab:CreateButton({
 	Name = "Mushroom feild",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Mushroom Field").CFrame  -- Mushroom feild
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Mushroom Field").CFrame 
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Strawberry feild",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Strawberry Field").CFrame  -- Strawberry feild
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Strawberry Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Pumpkin Patch",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Pumpkin Patch").CFrame  -- Pumpkin Patch
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Pumpkin Patch").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Sunflower Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Sunflower Field").CFrame  -- Sunflower Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Sunflower Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Blue Flower Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Blue Flower Field").CFrame  -- Blue Flower Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Blue Flower Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Mountain Top Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Mountain Top Field").CFrame  -- Mountain Top Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Mountain Top Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Bamboo Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Bamboo Field").CFrame  -- Bamboo Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Bamboo Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Spider Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Spider Field").CFrame  -- Spider Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Spider Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Pine Tree Forest",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Pine Tree Forest").CFrame  -- Pine Tree Forest
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Pine Tree Forest").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Rose Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Rose Field").CFrame  -- Rose Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Rose Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Cactus Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Cactus Field").CFrame  -- Cactus Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Cactus Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Ant Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Ant Field").CFrame  -- Ant Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Ant Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Stump Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Stump Field").CFrame  -- Stump Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Stump Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Clover Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Clover Field").CFrame  -- Clover Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Clover Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Coconut Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Coconut Field").CFrame  -- Coconut Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Coconut Field").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Pepper Patch",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Pepper Patch").CFrame  -- Pepper Patch
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Pepper Patch").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Pineapple Patch",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Pineapple Patch").CFrame  -- Pineapple Patch
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Pineapple Patch").CFrame
 	end,
 })
 local Button = TPTab:CreateButton({
 	Name = "Dandelion Field",
 	Callback = function()
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Dandelion Field").CFrame  -- Dandelion Field
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").FlowerZones:FindFirstChild("Dandelion Field").CFrame
 	end,
 })
 
@@ -172,10 +179,11 @@ local Button = TPTab:CreateButton({
 local Section = TPTab:CreateSection("cannons")
 
 
-local Section = TPTab:CreateSection("others")
-
 
 local Section = TPTab:CreateSection("NCPs")
+
+
+local Section = TPTab:CreateSection("others")
 
 
 -- farming
