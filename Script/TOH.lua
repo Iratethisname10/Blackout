@@ -1,7 +1,7 @@
 ---@diagnostic disable: undefined-global
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/misc/log.lua"))()
 
 
 local Window = Rayfield:CreateWindow({
@@ -120,4 +120,7 @@ local Button = MiscTab:CreateButton({
 		end)
 	end,
 })
+
+
+
 
