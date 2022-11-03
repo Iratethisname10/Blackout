@@ -3,8 +3,8 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "BlackOut v1",
-	LoadingTitle = "BlackOut v1",
+	Name = "BlackOut v1 | Murder Mystery 2",
+	LoadingTitle = "BlackOut v1 | Murder Mystery 2",
 	LoadingSubtitle = "Script By Vo",
 	ConfigurationSaving = {
 		Enabled = true,
@@ -12,7 +12,7 @@ local Window = Rayfield:CreateWindow({
 	},
 	KeySystem = false, 
 	KeySettings = {
-		Title = "BlackOut v1",
+		Title = "BlackOut v1 | Key System",
 		Subtitle = "Key System",
 		Note = "Join the discord (discord.gg/WQqFAEkhJ5)",
 		Key = "ABCDEF"
@@ -42,10 +42,7 @@ local Slider = PlayerTab:CreateSlider({
 	CurrentValue = 16,
 	Flag = "mm2 speed",
 	Callback = function(Value)
-		while true do
-			wait(1)
-			game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').WalkSpeed = Value
-		end
+		game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').WalkSpeed = Value
 	end,
 })
 local Slider = PlayerTab:CreateSlider({
@@ -56,10 +53,7 @@ local Slider = PlayerTab:CreateSlider({
 	CurrentValue = 50,
 	Flag = "mm2 speed",
 	Callback = function(Value)
-		while true do
-			wait(1)
-			game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').JumpPower = Value
-		end
+		game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').JumpPower = Value
 	end,
 })
 
@@ -105,6 +99,23 @@ local Button = ExploitsTab:CreateButton({
 
 -- gamemodes
 local GameTab = Window:CreateTab("Game Modes", 4483362458)
+
+local Button = GameTab:CreateButton({
+	Name = "Tp to Lobby",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Lobby.Spawns:FindFirstChild("SpawnLocation").CFrame
+	end,
+})
+--[[local Input = GameTab:CreateInput({
+	Name = "Tp to Player",
+	PlaceholderText = "Player Name",
+	RemoveTextAfterFocusLost = false,
+	Callback = function(Text)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.Character.HumanoidRootPart.CFrame
+	end,
+})
+]]
+
 
 
 -- Misc
