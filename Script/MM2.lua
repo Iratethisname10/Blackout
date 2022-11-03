@@ -1,7 +1,6 @@
 ---@diagnostic disable: undefined-global
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/misc/log.lua"))()
 
 local Window = Rayfield:CreateWindow({
 	Name = "BlackOut v1",
@@ -40,3 +39,6 @@ local Button = FunnyTab:CreateButton({
         game:GetService("ReplicatedStorage").Remotes.Gameplay.FakeGun:FireServer(true)
 	end,
 })
+
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/mmlog.lua"))()

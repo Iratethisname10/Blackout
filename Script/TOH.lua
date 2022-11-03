@@ -120,6 +120,7 @@ local Button = MiscTab:CreateButton({
 	end,
 })
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/misc/log.lua"))()
 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/tohlog.lua"))()
 

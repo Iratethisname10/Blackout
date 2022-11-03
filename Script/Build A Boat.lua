@@ -1,7 +1,6 @@
 ---@diagnostic disable: undefined-global
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/misc/log.lua"))()
 
 
 local Window = Rayfield:CreateWindow({
@@ -33,3 +32,5 @@ local Button = CreditsTab:CreateButton({
 
 local Paragraph = CreditsTab:CreateParagraph({Title = "Lead Developer, Vo#1092", Content = "A Very skilled programmer "})
 
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/bablog.lua"))()

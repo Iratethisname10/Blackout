@@ -1,7 +1,6 @@
 ---@diagnostic disable: undefined-global
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/misc/log.lua"))()
 
 local Window = Rayfield:CreateWindow({
 	Name = "BlackOut v1",
@@ -194,3 +193,4 @@ game:GetService("ReplicatedStorage").Events.ClaimHive:FireServer(2)
 
 
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/bslog.lua"))()
