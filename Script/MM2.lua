@@ -58,9 +58,9 @@ local Slider = PlayerTab:CreateSlider({
 })
 
 
+
 -- Visuals
 local VisualsTab = Window:CreateTab("Visuals", 4483362458)
-
 
 
 -- Exploits
@@ -100,21 +100,23 @@ local Button = ExploitsTab:CreateButton({
 -- gamemodes
 local GameTab = Window:CreateTab("Game Modes", 4483362458)
 
+local Label = GameTab:CreateLabel("Teleports")
+
 local Button = GameTab:CreateButton({
 	Name = "Tp to Lobby",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").Lobby.Spawns:FindFirstChild("SpawnLocation").CFrame
 	end,
 })
---[[local Input = GameTab:CreateInput({
-	Name = "Tp to Player",
-	PlaceholderText = "Player Name",
-	RemoveTextAfterFocusLost = false,
-	Callback = function(Text)
-		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.Character.HumanoidRootPart.CFrame
+
+local Label = GameTab:CreateLabel("Others")
+
+local Button = GameTab:CreateButton({
+	Name = "Destroy Lobby Barriers",
+	Callback = function()
+		game:GetService("Workspace").Lobby.MainLobby.InvisibleWalls:Destroy()
 	end,
 })
-]]
 
 
 
