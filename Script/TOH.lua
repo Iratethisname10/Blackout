@@ -4,8 +4,8 @@ local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shle
 
 
 local Window = Rayfield:CreateWindow({
-	Name = "BlackOut v1",
-	LoadingTitle = "BlackOut v1",
+	Name = "BlackOut v1 | Tower of hell",
+	LoadingTitle = "BlackOut v1 | Tower of hell",
 	LoadingSubtitle = "Script By Vo",
 	ConfigurationSaving = {
 		Enabled = true,
@@ -13,7 +13,7 @@ local Window = Rayfield:CreateWindow({
 	},
 	KeySystem = false, 
 	KeySettings = {
-		Title = "BlackOut v1",
+		Title = "BlackOut v1 | Key System",
 		Subtitle = "Key System",
 		Note = "Join the discord (discord.gg/WQqFAEkhJ5)",
 		Key = "ABCDEF"
@@ -108,7 +108,7 @@ local Button = MiscTab:CreateButton({
 })
 
 local Button = MiscTab:CreateButton({
-	Name = "Anti Client Kick",
+	Name = "Anti AFK",
 	Callback = function()
 		Rayfield:Notify("BlackOut","Disabled Client Kicks",11430595837)
 		local vu = game:GetService("VirtualUser")
