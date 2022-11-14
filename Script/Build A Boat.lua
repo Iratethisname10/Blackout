@@ -13,7 +13,7 @@ local Window = Rayfield:CreateWindow({
 	},
 	KeySystem = false, 
 	KeySettings = {
-		Title = "BlackOut v1",
+		Title = "BlackOut v1 | KeySystem",
 		Subtitle = "Key System",
 		Note = "Join the discord (discord.gg/WQqFAEkhJ5)",
 		Key = "ABCDEF"
@@ -34,52 +34,45 @@ local Paragraph = CreditsTab:CreateParagraph({Title = "Lead Developer, Vo#1092",
 
 local farmTab = Window:CreateTab("farming", 4483362458)
 
-local Button = farmTab:CreateButton({
+
+_G.AutoFarm = true
+function AutoFarmTP()
+    while _G.AutoFarm == true do
+		game:GetService("Workspace").Gravity = 0
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage1:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage2:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage3:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage4:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage5:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage6:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage7:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage8:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage9:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage10:FindFirstChild("DarknessPart").CFrame
+		wait(3)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.TheEnd.GoldenChest:FindFirstChild("Trigger").CFrame
+		game:GetService("Workspace").Gravity = 192
+		wait(20)
+    end
+end
+local Toggle = farmTab:CreateToggle({
 	Name = "AutoFarm TP",
-	Callback = function()
-		while true do
-			game:GetService("Workspace").Gravity = 0
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage1:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage2:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage3:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage4:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage5:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage6:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage7:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage8:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage9:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.CaveStage10:FindFirstChild("DarknessPart").CFrame
-			wait(3)
-			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Workspace").BoatStages.NormalStages.TheEnd.GoldenChest:FindFirstChild("Trigger").CFrame
-			game:GetService("Workspace").Gravity = 192
-			wait(20)
-		end
+	CurrentValue = false,
+	Flag = "autofarmtp",
+	Callback = function(Value)
+		_G.AutoFarm = Value
+        AutoFarmTP()
 	end,
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
