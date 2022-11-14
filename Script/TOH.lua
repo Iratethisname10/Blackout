@@ -41,7 +41,12 @@ local Button = PlayerTab:CreateButton({
 	Name = "Infinite Jumps",
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalJumps.Value = 6969
-		Rayfield:Notify("BlackOut","6900 jumps to be exact",10010348543)
+		Rayfield:Notify({
+			Title = "Infinite Jumps",
+			Content = "globalJumps Value set to 6969",
+			Duration = 5,
+			Image = 4483362458,
+		})
 	end,
 })	
 local Slider = PlayerTab:CreateSlider({
@@ -53,7 +58,6 @@ local Slider = PlayerTab:CreateSlider({
 	Flag = "Speed Slider", 
 	Callback = function(Value)
     	game:GetService("ReplicatedStorage").globalSpeed.Value = Value
-		Rayfield:Notify("BlackOut","Speed Set to "..Value,11430595837)
 	end,
 })
 
@@ -63,14 +67,24 @@ local Button = PlayerTab:CreateButton({
 	Name = "Reset Jumps",
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalJumps.Value = 0
-		Rayfield:Notify("BlackOut","Jumps set to 0",11430595837)
+		Rayfield:Notify({
+			Title = "Reset Jumps",
+			Content = "globalJumps Value set to 0",
+			Duration = 5,
+			Image = 4483362458,
+		})
 	end,
 })
 local Button = PlayerTab:CreateButton({
 	Name = "Reset Speed",
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
-		Rayfield:Notify("BlackOut","Speed set to 16",11430595837)
+		Rayfield:Notify({
+			Title = "Reset Jumps",
+			Content = "globalSpeed Value set to 16",
+			Duration = 5,
+			Image = 4483362458,
+		})
 	end,
 })
 local Button = PlayerTab:CreateButton({
@@ -78,7 +92,12 @@ local Button = PlayerTab:CreateButton({
 	Callback = function()
 		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
 		game:GetService("ReplicatedStorage").globalJumps.Value = 0
-		Rayfield:Notify("BlackOut","Speed 16, Jump 0",11430595837)
+		Rayfield:Notify({
+			Title = "Reset All",
+			Content = "Values set to 0,16",
+			Duration = 5,
+			Image = 4483362458,
+		})
 	end,
 })
 
@@ -88,13 +107,41 @@ local BoxesTab = Window:CreateTab("Boxes")
 -- misc
 local MiscTab = Window:CreateTab("Misc")
 
+_G.gmode = true
+function GodMode()
+    while _G.gmode == true do
+		wait()
+		local me = game.Players.LocalPlayer.Name
+		for i,v in pairs(game:GetService("Workspace")[me]:GetChildren()) do
+			if v.Name == "hitbox" then
+				v:ClearAllChildren()
+				wait()
+			end
+		end
+    end
+end
+local Toggle = MiscTab:CreateToggle({
+	Name = "Remove Kill detector",
+	CurrentValue = false,
+	Flag = "gmodetoggle",
+	Callback = function(Value)
+		_G.gmode = Value
+        GodMode()
+	end,
+})
+
 local Button = MiscTab:CreateButton({
 	Name = "Win",
 	Callback = function()
 		local FaggotSlut = game:GetService("Workspace").tower.finishes:FindFirstChild("Finish")
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FaggotSlut.CFrame
 		if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame == FaggotSlut.CFrame then
-			Rayfield:Notify("BlackOut","Finnished",11430595837)
+			Rayfield:Notify({
+				Title = "BlackOut",
+				Content = "finnished",
+				Duration = 5,
+				Image = 4483362458,
+			})
 		end
 	end,
 })
@@ -103,14 +150,18 @@ local Button = MiscTab:CreateButton({
 	Name = "Copy Appeal Text",
 	Callback = function()
 		setclipboard("I acknowledge that I have been banned justly for exploiting and hereby agree that I will not to do so again. Furthermore agree to have all my progress in the game deleted and wait 7 more days until I am am unbanned.")
-		Rayfield:Notify("BlackOut","Appeal text copied to clipboard",11430595837)
+		Rayfield:Notify({
+			Title = "Blackout",
+			Content = "Appeal text copied to clipboard",
+			Duration = 5,
+			Image = 4483362458,
+		})
 	end,
 })
 
 local Button = MiscTab:CreateButton({
 	Name = "Anti AFK",
 	Callback = function()
-		Rayfield:Notify("BlackOut","Disabled Client Kicks",11430595837)
 		local vu = game:GetService("VirtualUser")
 		game:GetService("Players").LocalPlayer.Idled:connect(function()
 			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
