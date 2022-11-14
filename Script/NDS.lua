@@ -2,21 +2,29 @@
 
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
-
 local Window = Rayfield:CreateWindow({
-	Name = "BlackOut v1 | Natural Disaster Survival",
-	LoadingTitle = "BlackOut v1 | Natural Disaster Survival",
-	LoadingSubtitle = "Script By Vo",
+	Name = "Blackout v1 | Murder Mystery 2",
+	LoadingTitle = "Blackout v1 | Murder Mystery 2",
+	LoadingSubtitle = "Script by Vo",
 	ConfigurationSaving = {
 		Enabled = true,
-		FileName = "BlackOut"
+		FolderName = nil,
+		FileName = "Blackout"
 	},
-	KeySystem = false, 
+        Discord = {
+        	Enabled = true,
+        	Invite = "NbUUucBXhq",
+        	RememberJoins = false
+        },
+	KeySystem = true,
 	KeySettings = {
-		Title = "BlackOut v1 | Key System",
+		Title = "Blackout v1",
 		Subtitle = "Key System",
-		Note = "Join the discord (discord.gg/WQqFAEkhJ5)",
-		Key = "ABCDEF"
+		Note = "Join the discord (discord.gg/NbUUucBXhq)",
+		FileName = "SiriusKey",
+		SaveKey = true,
+		GrabKeyFromSite = true,
+		Key = "https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/setting%20save"
 	}
 })
 
@@ -26,7 +34,13 @@ local CreditsTab = Window:CreateTab("Credits")
 local Button = CreditsTab:CreateButton({
 	Name = "Join The Discord :D",
 	Callback = function()
-		setclipboard("https://discord.gg/WQqFAEkhJ5")
+		setclipboard("https://discord.gg/NbUUucBXhq")
+		Rayfield:Notify({
+			Title = "Blackout",
+			Content = "Discord Invite copied to clipboard",
+			Duration = 5,
+			Image = 4483362458,
+		})
 	end,
 })
 
@@ -49,7 +63,7 @@ local Slider = PlayerTab:CreateSlider({
 	Increment = 1,
 	Suffix = " ",
 	CurrentValue = 16,
-	Flag = "mm2 speed",
+	Flag = "NDS speed",
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').WalkSpeed = Value
 	end,
@@ -60,7 +74,7 @@ local Slider = PlayerTab:CreateSlider({
 	Increment = 1,
 	Suffix = " ",
 	CurrentValue = 50,
-	Flag = "mm2 speed",
+	Flag = "nds jump",
 	Callback = function(Value)
 		game.Players.LocalPlayer.Character:FindFirstChildOfClass('Humanoid').JumpPower = Value
 	end,
@@ -85,5 +99,6 @@ local Button = tpTab:CreateButton({
 
 -- misc
 local miscTab = Window:CreateTab("Misc", 4483362458)
+
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/ndslog.lua"))()
