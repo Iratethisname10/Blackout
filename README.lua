@@ -1,1 +1,2 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Loader.lua"))()
+# Project Blackout
+**im  bored af, thats why i made this**
