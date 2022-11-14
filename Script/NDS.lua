@@ -16,12 +16,12 @@ local Window = Rayfield:CreateWindow({
         	Invite = "NbUUucBXhq",
         	RememberJoins = false
         },
-	KeySystem = true,
+	KeySystem = false,
 	KeySettings = {
 		Title = "Blackout v1",
 		Subtitle = "Key System",
 		Note = "Join the discord (discord.gg/NbUUucBXhq)",
-		FileName = "SiriusKey",
+		FileName = "BlackoutKey",
 		SaveKey = true,
 		GrabKeyFromSite = true,
 		Key = "https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/setting%20save"
