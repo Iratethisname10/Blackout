@@ -18,3 +18,6 @@ end
 if game.PlaceId == 189707 then  --nds
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/NDS.lua"))()
 end
+if game.PlaceId == 3101667897 then  --legendsofspeed
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/speedlegends.lua"))()
+end
