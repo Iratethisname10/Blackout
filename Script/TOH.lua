@@ -78,14 +78,6 @@ local Slider = PlayerTab:CreateSlider({
     	game:GetService("ReplicatedStorage").globalSpeed.Value = Value
 	end,
 })
-
-
--- boxes
-local BoxesTab = Window:CreateTab("Boxes")
-
--- misc
-local MiscTab = Window:CreateTab("Misc")
-
 _G.gmode = true
 function GodMode()
     while _G.gmode == true do
@@ -99,8 +91,8 @@ function GodMode()
 		end
     end
 end
-local Toggle = MiscTab:CreateToggle({
-	Name = "Remove Kill detector",
+local Toggle = PlayerTab:CreateToggle({
+	Name = "God Mode",
 	CurrentValue = false,
 	Flag = "gmodetoggle",
 	Callback = function(Value)
@@ -108,6 +100,14 @@ local Toggle = MiscTab:CreateToggle({
         GodMode()
 	end,
 })
+
+
+-- boxes
+local BoxesTab = Window:CreateTab("Boxes")
+
+-- misc
+local MiscTab = Window:CreateTab("Misc")
+
 
 local Button = MiscTab:CreateButton({
 	Name = "Win",
@@ -143,7 +143,7 @@ local Button = MiscTab:CreateButton({
 	end,
 })
 local Button = MiscTab:CreateButton({
-	Name = "Ac disabler",
+	Name = "Disable Anti-cheat",
 	Callback = function()
 		local playerscripts = game:GetService'Players'.LocalPlayer.PlayerScripts
 		local script1 = playerscripts.LocalScript
