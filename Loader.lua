@@ -6,7 +6,7 @@ end
 if game.PlaceId == 142823291 then -- mm2
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/MM2.lua"))()
 end
-if game.PlaceId == 1962086868 then  -- toh
+if game.PlaceId == 1962086868 or 5253186791 then  -- toh
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/TOH.lua"))()
 end
 if game.PlaceId == 10758111998 then  -- booga
