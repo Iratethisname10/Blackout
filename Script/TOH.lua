@@ -3,8 +3,8 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "Blackout v1 | Murder Mystery 2",
-	LoadingTitle = "Blackout v1 | Murder Mystery 2",
+	Name = "Blackout v1 | Tower of hell",
+	LoadingTitle = "Blackout v1 | Tower of hell",
 	LoadingSubtitle = "Script by Vo",
 	ConfigurationSaving = {
 		Enabled = true,
@@ -51,22 +51,26 @@ local PlayerTab = Window:CreateTab("Local Player")
 
 local Label = PlayerTab:CreateLabel("Modifications")
 
-local Button = PlayerTab:CreateButton({
+_G.infjumps = true
+function jumpinf()
+    while _G.infjumps == true do
+        wait()
+		game:GetService("ReplicatedStorage").globalJumps.Value = 1298072
+    end
+end
+local Toggle = PlayerTab:CreateToggle({
 	Name = "Infinite Jumps",
-	Callback = function()
-		game:GetService("ReplicatedStorage").globalJumps.Value = 6969
-		Rayfield:Notify({
-			Title = "Infinite Jumps",
-			Content = "globalJumps Value set to 6969",
-			Duration = 5,
-			Image = 4483362458,
-		})
+	CurrentValue = false,
+	Flag = "infjumpstoh",
+	Callback = function(Value)
+		_G.infjumps = Value
+        jumpinf()
 	end,
-})	
+})
 local Slider = PlayerTab:CreateSlider({
 	Name = "SetSpeed",
 	Range = {16, 120},
-	Increment = 5,
+	Increment = 1,
 	Suffix = "Speed",
 	CurrentValue = 16,
 	Flag = "Speed Slider", 
@@ -75,45 +79,6 @@ local Slider = PlayerTab:CreateSlider({
 	end,
 })
 
-local Label = PlayerTab:CreateLabel("Reset")
-
-local Button = PlayerTab:CreateButton({
-	Name = "Reset Jumps",
-	Callback = function()
-		game:GetService("ReplicatedStorage").globalJumps.Value = 0
-		Rayfield:Notify({
-			Title = "Reset Jumps",
-			Content = "globalJumps Value set to 0",
-			Duration = 5,
-			Image = 4483362458,
-		})
-	end,
-})
-local Button = PlayerTab:CreateButton({
-	Name = "Reset Speed",
-	Callback = function()
-		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
-		Rayfield:Notify({
-			Title = "Reset Jumps",
-			Content = "globalSpeed Value set to 16",
-			Duration = 5,
-			Image = 4483362458,
-		})
-	end,
-})
-local Button = PlayerTab:CreateButton({
-	Name = "Reset All",
-	Callback = function()
-		game:GetService("ReplicatedStorage").globalSpeed.Value = 16
-		game:GetService("ReplicatedStorage").globalJumps.Value = 0
-		Rayfield:Notify({
-			Title = "Reset All",
-			Content = "Values set to 0,16",
-			Duration = 5,
-			Image = 4483362458,
-		})
-	end,
-})
 
 -- boxes
 local BoxesTab = Window:CreateTab("Boxes")
@@ -159,6 +124,46 @@ local Button = MiscTab:CreateButton({
 		end
 	end,
 })
+local Button = MiscTab:CreateButton({
+	Name = "Get all tools (client)",
+	Callback = function()
+		for _,e in pairs(game.Players.LocalPlayer.Backpack:GetDescendants()) do
+			if e:IsA("Tool") then
+				e:Destroy()
+			end
+		end
+		wait()
+		for _,v in pairs(game.ReplicatedStorage.Gear:GetDescendants()) do
+			if v:IsA("Tool") then
+				local CloneThings = v:Clone()
+				wait()
+				CloneThings.Parent = game.Players.LocalPlayer.Backpack
+			end
+		end
+	end,
+})
+local Button = MiscTab:CreateButton({
+	Name = "Ac disabler",
+	Callback = function()
+		local playerscripts = game:GetService'Players'.LocalPlayer.PlayerScripts
+		local script1 = playerscripts.LocalScript
+        local script2 = playerscripts.LocalScript2
+
+		local script1signal = script1.Changed
+        local script2signal = script2.Changed
+
+		for i, connection in next, getconnections(script1signal) do
+			connection:Disable()
+		end
+		for i, connection in next, getconnections(script2signal) do
+			connection:Disable()
+		end
+
+		script1:Destroy()
+        script2:Destroy()
+	end,
+})
+
 
 local Button = MiscTab:CreateButton({
 	Name = "Copy Appeal Text",
@@ -173,18 +178,7 @@ local Button = MiscTab:CreateButton({
 	end,
 })
 
-local Button = MiscTab:CreateButton({
-	Name = "Anti AFK",
-	Callback = function()
-		local vu = game:GetService("VirtualUser")
-		game:GetService("Players").LocalPlayer.Idled:connect(function()
-			vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-			wait(1)
-			vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
-		end)
-	end,
-})
 
 
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/tohlog.lua"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/tohlog.lua"))()
