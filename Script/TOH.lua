@@ -105,6 +105,41 @@ local Toggle = PlayerTab:CreateToggle({
 -- boxes
 local BoxesTab = Window:CreateTab("Boxes")
 
+_G.autounbox = true
+function unbox()
+    while _G.autounbox == true do
+		wait()
+		game:GetService("ReplicatedStorage").openBox:InvokeServer("Regular")
+		wait(3)
+    end
+end
+local Toggle = BoxesTab:CreateToggle({
+	Name = "Auto Buy Boxes | slow",
+	CurrentValue = false,
+	Flag = "unboctoggle",
+	Callback = function(Value)
+		_G.autounbox = Value
+        unbox()
+	end,
+})
+_G.autounboxf = true
+function unboxf()
+    while _G.autounboxf == true do
+		wait()
+		game:GetService("ReplicatedStorage").openBox:InvokeServer("Regular")
+		wait()
+    end
+end
+local Toggle = BoxesTab:CreateToggle({
+	Name = "Auto Buy Boxes | fast",
+	CurrentValue = false,
+	Flag = "unboctoggle2",
+	Callback = function(Value)
+		_G.autounboxf = Value
+        unboxf()
+	end,
+})
+
 -- misc
 local MiscTab = Window:CreateTab("Misc")
 
