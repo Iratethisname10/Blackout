@@ -3,8 +3,8 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "Blackout v1 | Murder Mystery 2",
-	LoadingTitle = "Blackout v1 | Murder Mystery 2",
+	Name = "Blackout v1 | Build A Boat For Treasure",
+	LoadingTitle = "Blackout v1 | Build A Boat For Treasure",
 	LoadingSubtitle = "Script by Vo",
 	ConfigurationSaving = {
 		Enabled = true,
@@ -46,7 +46,7 @@ local Button = CreditsTab:CreateButton({
 
 local Paragraph = CreditsTab:CreateParagraph({Title = "Lead Developer, Vo#1092", Content = "A Very skilled programmer "})
 
-local farmTab = Window:CreateTab("farming", 4483362458)
+local mainTab = Window:CreateTab("Main", 4483362458)
 
 
 _G.AutoFarm = true
@@ -78,13 +78,102 @@ function AutoFarmTP()
 		wait(20)
     end
 end
-local Toggle = farmTab:CreateToggle({
+local Toggle = mainTab:CreateToggle({
 	Name = "AutoFarm TP",
 	CurrentValue = false,
 	Flag = "autofarmtp",
 	Callback = function(Value)
 		_G.AutoFarm = Value
         AutoFarmTP()
+	end,
+})
+local Button = mainTab:CreateButton({
+	Name = "Anti water Damage",
+	Callback = function()
+		game.Players.LocalPlayer.Character:FindFirstChild("WaterDetector"):Destroy()
+	end,
+})
+
+local chestTab = Window:CreateTab("Chests", 4483362458)
+
+_G.autocommon = true
+function autocommon()
+    while _G.autocommon == true do
+		workspace.ItemBoughtFromShop:InvokeServer("Common Chest",1)
+		wait(9)
+    end
+end
+local Toggle = chestTab:CreateToggle({
+	Name = "Auto Common chest",
+	CurrentValue = false,
+	Flag = "autocommon",
+	Callback = function(Value)
+		_G.autocommon = Value
+        autocommon()
+	end,
+})
+_G.autouncommon = true
+function autouncommon()
+    while _G.autouncommon == true do
+        workspace.ItemBoughtFromShop:InvokeServer("Uncommon Chest",1)
+		wait(9)
+    end
+end
+local Toggle = chestTab:CreateToggle({
+	Name = "Auto Uncommon chest",
+	CurrentValue = false,
+	Flag = "autocommon",
+	Callback = function(Value)
+		_G.autouncommon = Value
+        autouncommon()
+	end,
+})
+_G.autorare = true
+function autorare()
+    while _G.autorare == true do
+        workspace.ItemBoughtFromShop:InvokeServer("Rare Chest",1)
+		wait(9)
+    end
+end
+local Toggle = chestTab:CreateToggle({
+	Name = "Auto Rare chest",
+	CurrentValue = false,
+	Flag = "autocommon",
+	Callback = function(Value)
+		_G.autorare = Value
+        autorare()
+	end,
+})
+_G.autoepic = true
+function autoepic()
+    while _G.autoepic == true do
+        workspace.ItemBoughtFromShop:InvokeServer("Epic Chest",1)
+		wait(9)
+    end
+end
+local Toggle = chestTab:CreateToggle({
+	Name = "Auto Epic chest",
+	CurrentValue = false,
+	Flag = "autoepic",
+	Callback = function(Value)
+		_G.autoepic = Value
+        autoepic()
+	end,
+})
+_G.autolegendary = true
+function autolegendary()
+    while _G.autolegendary == true do
+        workspace.ItemBoughtFromShop:InvokeServer("Legendary Chest",1)
+		wait(9)
+    end
+end
+local Toggle = chestTab:CreateToggle({
+	Name = "Auto Legendary chest",
+	CurrentValue = false,
+	Flag = "autolegendary",
+	Callback = function(Value)
+		_G.autolegendary = Value
+        autolegendary()
 	end,
 })
 
