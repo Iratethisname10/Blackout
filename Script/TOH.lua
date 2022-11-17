@@ -125,7 +125,6 @@ local Toggle = BoxesTab:CreateToggle({
 _G.autounboxf = true
 function unboxf()
     while _G.autounboxf == true do
-		wait()
 		game:GetService("ReplicatedStorage").openBox:InvokeServer("Regular")
 		wait()
     end
@@ -143,13 +142,36 @@ local Toggle = BoxesTab:CreateToggle({
 -- misc
 local MiscTab = Window:CreateTab("Misc")
 
+local FaggotSlut = game:GetService("Workspace").tower.finishes:FindFirstChild("Finish")
 
 local Button = MiscTab:CreateButton({
 	Name = "Win",
 	Callback = function()
-		local FaggotSlut = game:GetService("Workspace").tower.finishes:FindFirstChild("Finish")
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FaggotSlut.CFrame
 		if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame == FaggotSlut.CFrame then
+			Rayfield:Notify({
+				Title = "BlackOut",
+				Content = "finnished",
+				Duration = 5,
+				Image = 4483362458,
+			})
+		end
+	end,
+})
+local Button = MiscTab:CreateButton({
+	Name = "Gravity Win | must disable AC",
+	Callback = function()
+		game:GetService("Workspace").Gravity = 0
+		game.Players.LocalPlayer.Character:FindFirstChildOfClass("Humanoid"):ChangeState("Jumping")
+		if game.PlaceId == 3582763398 then
+			wait(10)
+		end
+		if game.PlaceId == 1962086868 or 5253186791 then
+			wait(5)
+		end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FaggotSlut.CFrame
+		if game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame == FaggotSlut.CFrame then
+			game:GetService("Workspace").Gravity = 196.2
 			Rayfield:Notify({
 				Title = "BlackOut",
 				Content = "finnished",
@@ -219,6 +241,57 @@ local Button = MiscTab:CreateButton({
 	end,
 })
 
+local funTab = Window:CreateTab("⚠⚠ DANGER ZONE ⚠⚠")
+
+local Label = funTab:CreateLabel("⚠⚠ THIS IS THE DANGER ZONE ⚠⚠")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel("⚠⚠ DO THIS AT YOUR OWN RISK ⚠⚠")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel("⚠⚠ I DO NOT GIVE A FUCK ABOUT WHAT HAPPENS TO YOUR ACCOUNT ⚠⚠")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel("⚠⚠ WHAT YOU ARE DOING TO DO IS VERY DANGEROUS ⚠⚠")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel("⚠⚠ ARE YOU SURE YOU WANT TO DO THIS ⚠⚠")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel(" ")
+local Label = funTab:CreateLabel(" ")
+local Button = funTab:CreateButton({
+	Name = "⚠⚠ BAN YOURSELF ⚠⚠",
+	Callback = function()
+		game:GetService("ReplicatedStorage").globalSpeed.Value = 0
+		wait(2)
+		game:GetService("Workspace").tower.coinMultiplier.Value = 999999
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = FaggotSlut.CFrame
+		Rayfield:Notify({
+			Title = "Blackout",
+			Content = "success rate of 20%",
+			Duration = 5,
+			Image = 4483362458,
+		})
+		wait(1000)
+		Rayfield:Notify({
+			Title = "Blackout",
+			Content = "if you still have not been kicked for the reason of 'see ya later' then rejoin",
+			Duration = 5,
+			Image = 4483362458,
+		})
+		wait(4)
+		Rayfield:Notify({
+			Title = "Blackout",
+			Content = "you will be kicked by the script in 10 seconds",
+			Duration = 5,
+			Image = 4483362458,
+		})
+		wait(10)
+		game.players.LocalPlayer:kick("rejoin and repeat")
+	end,
+})
 
 
 
