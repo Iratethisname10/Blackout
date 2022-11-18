@@ -9,7 +9,10 @@ end
 if game.PlaceId == 1962086868 then  -- toh
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/TOH.lua"))()
 end
-if game.PlaceId == 5253186791 then  -- toh2
+if game.PlaceId == 5253186791 then  -- toh ban
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/TOH.lua"))()
+end
+if game.PlaceId == 3582763398 then  -- toh pro
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/TOH.lua"))()
 end
 if game.PlaceId == 10758111998 then  -- booga
