@@ -1,10 +1,8 @@
----@diagnostic disable: undefined-global
-
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "Blackout v1 | Tower of hell",
-	LoadingTitle = "Blackout v1 | Tower of hell",
+	Name = "Blackout v1 | "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+	LoadingTitle = "Blackout v1 | "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
 	LoadingSubtitle = "Script by Vo",
 	ConfigurationSaving = {
 		Enabled = true,

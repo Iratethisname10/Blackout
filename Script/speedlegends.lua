@@ -1,8 +1,8 @@
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "Blackout v1 | Legends Of Speed",
-	LoadingTitle = "Blackout v1 | Legends Of Speed",
+	Name = "Blackout v1 | "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
+	LoadingTitle = "Blackout v1 | "..game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,
 	LoadingSubtitle = "Script by Vo",
 	ConfigurationSaving = {
 		Enabled = true,
