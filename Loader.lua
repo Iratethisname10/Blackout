@@ -1,5 +1,3 @@
----@diagnostic disable: undefined-global
-
 if game.PlaceId == 537413528 then -- boat
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/Build%20A%20Boat.lua"))()
 end
@@ -24,6 +22,4 @@ end
 if game.PlaceId == 3101667897 then  --legendsofspeed
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/speedlegends.lua"))()
 end
-if game.PlaceId == 2619187362 then  --spfs
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/speedlegends.lua"))()
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/cuzyes.lua"))()
