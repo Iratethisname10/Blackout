@@ -1,10 +1,8 @@
----@diagnostic disable: undefined-global
-
 local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/Rayfield/main/source'))()
 
 local Window = Rayfield:CreateWindow({
-	Name = "Blackout v1 | Murder Mystery 2",
-	LoadingTitle = "Blackout v1 | Murder Mystery 2",
+	Name = "Blackout v1 | Legends Of Speed",
+	LoadingTitle = "Blackout v1 | Legends Of Speed",
 	LoadingSubtitle = "Script by Vo",
 	ConfigurationSaving = {
 		Enabled = true,
@@ -142,5 +140,3 @@ local Toggle = FarmTab:CreateToggle({
         FarmAll()
 	end,
 })
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/speedlog.lua"))()

