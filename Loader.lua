@@ -1,9 +1,6 @@
 if game.PlaceId == 537413528 then -- boat
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/Build%20A%20Boat.lua"))()
 end
-if game.PlaceId == 142823291 then -- mm2
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/MM2.lua"))()
-end
 if game.PlaceId == 1962086868 then  -- toh
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/TOH.lua"))()
 end
