@@ -22,6 +22,9 @@ end
 if game.PlaceId == 621129760 then  --kat
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/kat.lua"))()
 end
+if game.PlaceId == 9834528893 then  --1jumpsecond
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/Script/1jumpsecond.lua"))()
+end
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/cuzyes.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Iratethisname10/Blackout/main/genDetect.lua"))()
